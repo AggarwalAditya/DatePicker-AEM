@@ -1,0 +1,10 @@
+argil\core\models\DatePicker.class
+argil\core\models\HelloWorldModel.class
+argil\core\filters\LoggingFilter.class
+argil\core\listeners\SimpleResourceListener.class
+argil\core\models\NextFiveDates.class
+argil\core\models\TestSample.class
+argil\core\package-info.class
+argil\core\models\DatePickerWCMPOJO.class
+argil\core\schedulers\SimpleScheduledTask.class
+argil\core\servlets\SimpleServlet.class

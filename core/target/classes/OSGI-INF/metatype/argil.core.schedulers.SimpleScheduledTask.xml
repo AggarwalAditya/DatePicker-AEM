@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/argil.core.schedulers.SimpleScheduledTask">
+    <OCD id="argil.core.schedulers.SimpleScheduledTask" name="%argil.core.schedulers.SimpleScheduledTask.name" description="%argil.core.schedulers.SimpleScheduledTask.description">
+        <AD id="scheduler.expression" type="String" default="*/30\ *\ *\ *\ *\ ?" name="%argil.core.schedulers.SimpleScheduledTask.scheduler.expression.name" description="%argil.core.schedulers.SimpleScheduledTask.scheduler.expression.description"/>
+        <AD id="scheduler.concurrent" type="Boolean" default="false" name="%argil.core.schedulers.SimpleScheduledTask.scheduler.concurrent.name" description="%argil.core.schedulers.SimpleScheduledTask.scheduler.concurrent.description"/>
+        <AD id="myParameter" type="String" name="%argil.core.schedulers.SimpleScheduledTask.myParameter.name" description="%argil.core.schedulers.SimpleScheduledTask.myParameter.description"/>
+    </OCD>
+    <Designate pid="argil.core.schedulers.SimpleScheduledTask">
+        <Object ocdref="argil.core.schedulers.SimpleScheduledTask"/>
+    </Designate>
+</metatype:MetaData>

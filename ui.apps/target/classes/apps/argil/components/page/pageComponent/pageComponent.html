@@ -1,0 +1,25 @@
+
+<!-- <sly data-sly-use.abc="argil.core.models.TestSample" /> -->
+<!-- name is "${abc.message}" -->
+
+
+
+
+<html> 
+
+    <head>
+		<sly data-sly-include="/libs/wcm/core/components/init/init.jsp" data-sly-unwrap/>
+	</head>
+
+    <body>
+    	<sly data-sly-use.obj="${'argil.core.models.TestSample'}"/>
+
+
+		<!--date is "${obj.getDate}"
+		${properties.jcr:created.toString}-->
+
+		<div data-sly-resource="${'parsys1' @ resourceType='wcm/foundation/components/parsys'}"></div>
+
+	</body>
+
+</html>

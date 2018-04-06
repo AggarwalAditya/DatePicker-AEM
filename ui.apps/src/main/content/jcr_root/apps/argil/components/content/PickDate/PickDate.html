@@ -1,0 +1,18 @@
+<sly data-sly-use.obj="${'argil.core.models.DatePicker'}"/>
+
+
+<sly data-sly-test="${!properties.userDate}">
+	<h1>Enter date</h1>
+</sly>
+
+<sly data-sly-test="${properties.userDate}">
+	<h1>${obj.getMessage}</h1>
+</sly>
+
+
+<sly data-sly-use.obj2="${'argil.core.models.DatePickerWCMPOJO'}"/>
+
+<p>Using WCMUse</p>
+<sly data-sly-test="${properties.userDate}">
+	<h1>${obj2.getDate}</h1>
+</sly>
