@@ -2,7 +2,7 @@
     <scr:component immediate="true" name="argil.core.services.KeyServiceImpl" activate="activate" modified="modified">
         <implementation class="argil.core.services.KeyServiceImpl"/>
         <service servicefactory="false">
-            <provide interface="argil.core.services.KeyServiceImpl"/>
+            <provide interface="argil.core.services.MyService"/>
         </service>
         <property name="author.name" value="author"/>
         <property name="author.age" type="Integer" value="15"/>

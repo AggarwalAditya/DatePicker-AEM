@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1523885062915
+Bnd-LastModified: 1523955706134
 Build-Jdk: 1.8.0_161
 Built-By: ArgilDX
 Bundle-Description: Core bundle for argil.reactor
@@ -29,12 +29,12 @@ Provide-Capability: osgi.service;effective:=active;objectClass="javax.se
  rvlet.Servlet";service.vendor=Adobe,osgi.service;effective:=active;obje
  ctClass="java.lang.Runnable";scheduler.expression="*/30 * * * * ?";sche
  duler.concurrent=false;service.vendor=Adobe,osgi.service;effective:=act
- ive;objectClass="argil.core.services.KeyServiceImpl";author.name=author
- ;author.age=15;Gender="author.gender";service.vendor=Adobe,osgi.service
- ;effective:=active;objectClass="javax.servlet.Filter";service.ranking=-
- 700;sling.filter.scope=REQUEST;service.vendor=Adobe,osgi.service;effect
- ive:=active;objectClass="org.osgi.service.event.EventHandler";event.top
- ics="org/apache/sling/api/resource/Resource/*";service.vendor=Adobe
+ ive;objectClass="javax.servlet.Filter";service.ranking=-700;sling.filte
+ r.scope=REQUEST;service.vendor=Adobe,osgi.service;effective:=active;obj
+ ectClass="argil.core.services.MyService";author.name=author;author.age=
+ 15;Gender="author.gender";service.vendor=Adobe,osgi.service;effective:=
+ active;objectClass="org.osgi.service.event.EventHandler";event.topics="
+ org/apache/sling/api/resource/Resource/*";service.vendor=Adobe
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
 Service-Component: OSGI-INF/argil.core.schedulers.SimpleScheduledTask.xm
  l,OSGI-INF/argil.core.servlets.SimpleServlet.xml,OSGI-INF/argil.core.se

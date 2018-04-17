@@ -41,12 +41,12 @@ public class DatePicker
 	private String createdDate;
 
 	@OSGiService
-	private KeyServiceImpl myService;
+	private MyService myService;
 	
 	
 	public String func()
 	{
-		String temp = myService.getAge()+myService.getGender()+myService.getInterests();
+		String temp = myService.getAge()+myService.getInterests();
 		return temp;
 	}
 	

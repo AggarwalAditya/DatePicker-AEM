@@ -15,11 +15,10 @@ import org.apache.felix.scr.annotations.Component;
 
 
 @Component(immediate = true, metatype = true)
-@Service(value = KeyServiceImpl.class)
+@Service(value = MyService.class)
 public class KeyServiceImpl implements MyService 
 {
-	
-//	private int key=0;
+
 	private String name,gender;
 	private String age;
 	private String[] interests;
@@ -77,23 +76,23 @@ public class KeyServiceImpl implements MyService
 	
 	@Activate
 	protected void activate(@SuppressWarnings("rawtypes") final Map context) {
-	    this.name = PropertiesUtil.toString(context.get(AUTHOR_NAME), "aditya");
-	    this.gender = PropertiesUtil.toString(context.get(AUTHOR_GENDER),"aditya");
+	    this.name = PropertiesUtil.toString(context.get(AUTHOR_NAME), "");
+	    this.gender = PropertiesUtil.toString(context.get(AUTHOR_GENDER),"");
 	    this.interests = PropertiesUtil.toStringArray(context.get(AUTHOR_INTERESTS));
-	    this.age = PropertiesUtil.toString(context.get(AUTHOR_AGE),"aditya");
+	    this.age = PropertiesUtil.toString(context.get(AUTHOR_AGE),"");
 	 
 	}
 	
 	@Modified
 	protected void modified(ComponentContext context){
 	    this.name = PropertiesUtil.toString(
-	        context.getProperties().get(AUTHOR_NAME),"aditya");
+	        context.getProperties().get(AUTHOR_NAME),"");
 	    this.gender = PropertiesUtil.toString(
-	        context.getProperties().get(AUTHOR_GENDER),"aditya");
+	        context.getProperties().get(AUTHOR_GENDER),"");
 	     this.interests = PropertiesUtil.toStringArray(
 	              context.getProperties().get(AUTHOR_INTERESTS));
 	    this.age = PropertiesUtil.toString(
-	            context.getProperties().get(AUTHOR_AGE),"aditya");
+	            context.getProperties().get(AUTHOR_AGE),"");
 	}
 	
 }
