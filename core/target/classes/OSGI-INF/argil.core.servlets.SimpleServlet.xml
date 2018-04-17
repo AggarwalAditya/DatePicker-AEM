@@ -8,6 +8,5 @@
             argil/structure/page
         </property>
         <property name="service.vendor" value="Adobe"/>
-        <property name="service.pid" value="argil.core.servlets.SimpleServlet"/>
     </scr:component>
 </components>

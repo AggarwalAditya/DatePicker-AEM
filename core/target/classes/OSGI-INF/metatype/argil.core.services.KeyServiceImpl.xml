@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/argil.core.services.KeyServiceImpl">
+    <OCD id="argil.core.services.KeyServiceImpl" name="%argil.core.services.KeyServiceImpl.name" description="%argil.core.services.KeyServiceImpl.description">
+        <AD id="author.name" type="String" default="author" name="%argil.core.services.KeyServiceImpl.author.name.name" description="%argil.core.services.KeyServiceImpl.author.name.description"/>
+        <AD id="author.age" type="Integer" default="15" name="%argil.core.services.KeyServiceImpl.author.age.name" description="%argil.core.services.KeyServiceImpl.author.age.description"/>
+        <AD id="Gender" type="String" default="author.gender" name="%argil.core.services.KeyServiceImpl.Gender.name" description="%argil.core.services.KeyServiceImpl.Gender.description">
+            <Option value="1" label="Male"/>
+            <Option value="2" label="Female"/>
+        </AD>
+        <AD id="author.interests" type="String" name="%argil.core.services.KeyServiceImpl.author.interests.name" description="%argil.core.services.KeyServiceImpl.author.interests.description" cardinality="2147483647"/>
+    </OCD>
+    <Designate pid="argil.core.services.KeyServiceImpl">
+        <Object ocdref="argil.core.services.KeyServiceImpl"/>
+    </Designate>
+</metatype:MetaData>

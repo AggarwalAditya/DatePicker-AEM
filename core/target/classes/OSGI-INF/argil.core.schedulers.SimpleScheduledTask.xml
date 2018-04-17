@@ -8,6 +8,5 @@
         <property name="scheduler.concurrent" type="Boolean" value="false"/>
         <property name="myParameter"/>
         <property name="service.vendor" value="Adobe"/>
-        <property name="service.pid" value="argil.core.schedulers.SimpleScheduledTask"/>
     </scr:component>
 </components>

@@ -1,4 +1,6 @@
 argil\core\models\DatePicker.class
+argil\core\services\KeyServiceImpl.class
+argil\core\services\MyService.class
 argil\core\models\HelloWorldModel.class
 argil\core\filters\LoggingFilter.class
 argil\core\listeners\SimpleResourceListener.class

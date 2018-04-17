@@ -6,6 +6,5 @@
         </service>
         <property name="event.topics" value="org/apache/sling/api/resource/Resource/*"/>
         <property name="service.vendor" value="Adobe"/>
-        <property name="service.pid" value="argil.core.listeners.SimpleResourceListener"/>
     </scr:component>
 </components>

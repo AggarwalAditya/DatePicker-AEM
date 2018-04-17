@@ -14,11 +14,18 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.apache.felix.scr.annotations.Reference;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
+import org.apache.sling.installer.api.OsgiInstaller;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.Self;
+import org.osgi.service.component.annotations.Modified;
+
+import argil.core.services.KeyServiceImpl;
+import argil.core.services.MyService;
 
 @Model(adaptables = { Resource.class})
 public class DatePicker 
@@ -26,13 +33,23 @@ public class DatePicker
 	private Date date;
 	private Calendar calendar;
 	
-	@Inject 
+	@Inject @Optional 
 	private String userDate;
 	
 	@Inject 
-	@Named("jcr:created")
+	@Named("jcr:created")	
 	private String createdDate;
 
+	@OSGiService
+	private KeyServiceImpl myService;
+	
+	
+	public String func()
+	{
+		String temp = myService.getAge()+myService.getGender()+myService.getInterests();
+		return temp;
+	}
+	
 	
 	public void setUserDate(String userDate) 
 	{
@@ -42,6 +59,12 @@ public class DatePicker
 	public String getUserDate() 
 	{
 		return createdDate;
+	}
+	
+	@PostConstruct
+	public void nishant()
+	{
+		System.out.println(myService.getAge());
 	}
 	
 	public String getDayFromDate() throws ParseException
@@ -64,4 +87,6 @@ public class DatePicker
 		
 		return str.toString();
 	}
+	
+	
 }
