@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/argil.core.servlets.SimpleServlet">
+    <OCD id="argil.core.servlets.SimpleServlet" name="%argil.core.servlets.SimpleServlet.name" description="%argil.core.servlets.SimpleServlet.description"/>
+    <Designate pid="argil.core.servlets.SimpleServlet">
+        <Object ocdref="argil.core.servlets.SimpleServlet"/>
+    </Designate>
+</metatype:MetaData>

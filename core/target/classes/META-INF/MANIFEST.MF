@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1523955706134
+Bnd-LastModified: 1524040504383
 Build-Jdk: 1.8.0_161
 Built-By: ArgilDX
 Bundle-Description: Core bundle for argil.reactor
@@ -8,14 +8,14 @@ Bundle-Name: argil.reactor - Core
 Bundle-SymbolicName: com.argil.sampleApp.core
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
-Export-Package: argil.core.filters;uses:="javax.servlet";version="1.0.0"
- ,argil.core.listeners;uses:="org.osgi.service.event";version="1.0.0",ar
- gil.core.models;uses:="com.adobe.cq.sightly,javax.annotation,javax.inje
- ct,org.apache.sling.api.resource,org.apache.sling.models.annotations";v
- ersion="1.0.0",argil.core;version="1.0",argil.core.schedulers;version="
- 1.0.0",argil.core.services;uses:="org.osgi.service.component";version="
- 1.0.0",argil.core.servlets;uses:="javax.servlet,org.apache.sling.api,or
- g.apache.sling.api.servlets";version="1.0.0"
+Export-Package: argil.core.filters;version="1.0.0";uses:="javax.servlet"
+ ,argil.core.listeners;version="1.0.0";uses:="org.osgi.service.event",ar
+ gil.core.models;version="1.0.0";uses:="com.adobe.cq.sightly,javax.annot
+ ation,javax.inject,org.apache.sling.api.resource,org.apache.sling.model
+ s.annotations",argil.core;version="1.0",argil.core.schedulers;version="
+ 1.0.0",argil.core.services;version="1.0.0";uses:="org.osgi.service.comp
+ onent",argil.core.servlets;version="1.0.0";uses:="javax.jcr,javax.servl
+ et,org.apache.sling.api,org.apache.sling.api.servlets"
 Import-Package: com.adobe.cq.sightly;version="[2.2,3)",javax.annotation,
  javax.inject,javax.jcr;version="[2.0,3)",javax.servlet,org.apache.sling
  .api;version="[2.3,3)",org.apache.sling.api.request;version="[2.4,3)",o
@@ -35,10 +35,13 @@ Provide-Capability: osgi.service;effective:=active;objectClass="javax.se
  15;Gender="author.gender";service.vendor=Adobe,osgi.service;effective:=
  active;objectClass="org.osgi.service.event.EventHandler";event.topics="
  org/apache/sling/api/resource/Resource/*";service.vendor=Adobe
-Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =javax.jcr.Repository)",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6
+ ))"
 Service-Component: OSGI-INF/argil.core.schedulers.SimpleScheduledTask.xm
  l,OSGI-INF/argil.core.servlets.SimpleServlet.xml,OSGI-INF/argil.core.se
- rvices.KeyServiceImpl.xml,OSGI-INF/argil.core.listeners.SimpleResourceL
- istener.xml,OSGI-INF/argil.core.filters.LoggingFilter.xml
+ rvlets.MyServlet.xml,OSGI-INF/argil.core.services.KeyServiceImpl.xml,OS
+ GI-INF/argil.core.listeners.SimpleResourceListener.xml,OSGI-INF/argil.c
+ ore.filters.LoggingFilter.xml
 Sling-Model-Packages: argil.core
 Tool: Bnd-2.3.0.201405100607

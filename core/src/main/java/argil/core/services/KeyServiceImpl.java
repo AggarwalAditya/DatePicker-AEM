@@ -73,7 +73,6 @@ public class KeyServiceImpl implements MyService
 		Arrays.sort(interests);	
 	}
 	
-	
 	@Activate
 	protected void activate(@SuppressWarnings("rawtypes") final Map context) {
 	    this.name = PropertiesUtil.toString(context.get(AUTHOR_NAME), "");

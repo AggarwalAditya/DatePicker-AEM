@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
-    <scr:component name="argil.core.servlets.SimpleServlet">
-        <implementation class="argil.core.servlets.SimpleServlet"/>
+    <scr:component name="argil.core.servlets.MyServlet">
+        <implementation class="argil.core.servlets.MyServlet"/>
         <service servicefactory="false">
             <provide interface="javax.servlet.Servlet"/>
         </service>
-        <property name="sling.servlet.resourceTypes">
-            /apps/argil/components/page/pageComponent
-        </property>
-        <property name="sling.servlet.selectors">
-            data
-        </property>
-        <property name="sling.servlet.extensions">
-            html
+        <property name="sling.servlet.paths">
+            /content/my-page
         </property>
         <property name="sling.servlet.methods">
             GET
         </property>
         <property name="service.vendor" value="Adobe"/>
+        <reference name="repository" interface="javax.jcr.Repository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository"/>
     </scr:component>
 </components>
